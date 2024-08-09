@@ -198,7 +198,7 @@ int sc_main(int argc, char* argv[]) {
 	rv_thunder TOP("TOP");
 	TOP.clk(clk);
 
-	sc_trace_file* tf = sc_create_vcd_trace_file("decode");
+	sc_trace_file* tf = sc_create_vcd_trace_file("top");
 	sc_trace(tf, TOP.fetch_inst.clk, "clk");
 	sc_trace(tf, TOP.pc_inst.address, "pcvalue");
 	sc_trace(tf, TOP.pc_inst.pc_branch, "branchval_pc");

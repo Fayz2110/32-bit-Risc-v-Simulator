@@ -29,7 +29,7 @@ SC_MODULE(imem) {
 
         mem = new sc_int<32>[memsize]; // Allocate memory
 
-        while (fscanf_s(fp, "%x", &mem_word) != EOF) {
+        while (fscanf(fp, "%x", &mem_word) != EOF) {
             mem[size] = mem_word;
             size++;
         }
